@@ -10,7 +10,7 @@ function addConnections(n) {
 
 var io = require('socket.io')(server,{
   cors: {
-    origin: ["http://localhost:3001", "https://st-react.oscarcatarigutierrez.com"],
+    origin: ["http://localhost:3001", "http://st-react.oscarcatarigutierrez.com"],
     methods: ["GET", "POST"],
 	  credentials: true
   }
