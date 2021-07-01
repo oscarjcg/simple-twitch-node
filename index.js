@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var server = require('https').createServer(app);
+var server = require('http').createServer(app);
 
 var totalConnections = 0;
 
@@ -10,7 +10,10 @@ function addConnections(n) {
 
 var io = require('socket.io')(server,{
   cors: {
-    origin: ["http://localhost:3001", "http://st-react.oscarcatarigutierrez.com"],
+    origin: ["http://localhost:3001", 
+      "http://st-react.oscarcatarigutierrez.com", 
+      "https://st-react.oscarcatarigutierrez.com"
+    ],
     methods: ["GET", "POST"],
 	  credentials: true
   }
