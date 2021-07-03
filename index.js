@@ -45,6 +45,12 @@ app.get('/test', function(req, res){
 
     res.send('test');
 });
+
+app.post('/new-message', function(req, res){
+  console.log("newMessage");
+  io.emit('newMessage', req.body);
+  res.send('new-message');
+});
   
 io.on('connection', (socket) => {
     addConnections(1);
@@ -58,8 +64,4 @@ io.on('connection', (socket) => {
         io.emit('totalConnections', totalConnections);
     });
 
-    socket.on('newMessage', (json) => {
-      console.log("newMessage in " + json);
-      io.emit('newMessage', json);
-  });
 });
