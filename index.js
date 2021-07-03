@@ -57,4 +57,9 @@ io.on('connection', (socket) => {
         console.log("Disconnection " + totalConnections);
         io.emit('totalConnections', totalConnections);
     });
+
+    socket.on('newMessage', (json) => {
+      console.log("newMessage in " + json);
+      io.emit('newMessage', json);
+  });
 });
