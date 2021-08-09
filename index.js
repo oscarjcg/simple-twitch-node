@@ -12,7 +12,9 @@ var io = require('socket.io')(server,{
   cors: {
     origin: ["http://localhost:3001", 
       "http://st-react.oscarcatarigutierrez.com", 
-      "https://st-react.oscarcatarigutierrez.com"
+      "https://st-react.oscarcatarigutierrez.com",
+      "http://simple-twitch.oscarcatarigutierrez.com",
+      "https://simple-twitch.oscarcatarigutierrez.com"
     ],
     methods: ["GET", "POST"],
 	  credentials: true
