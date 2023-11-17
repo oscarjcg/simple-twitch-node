@@ -11,10 +11,10 @@ function addConnections(n) {
 var io = require('socket.io')(server,{
   cors: {
     origin: ["http://localhost:3001", 
-      "http://st-react.oscarcatarigutierrez.com", 
-      "https://st-react.oscarcatarigutierrez.com",
-      "http://simple-twitch.oscarcatarigutierrez.com",
-      "https://simple-twitch.oscarcatarigutierrez.com"
+      "http://st-react.codename-project.com", 
+      "https://st-react.codename-project.com",
+      "http://simple-twitch.codename-project.com",
+      "https://simple-twitch.codename-project.com"
     ],
     methods: ["GET", "POST"],
 	  credentials: true
